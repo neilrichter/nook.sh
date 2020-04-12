@@ -1,4 +1,3 @@
-
 module.exports = {
   mode: 'universal',
   /*
@@ -23,6 +22,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/css/global.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -35,16 +35,14 @@ module.exports = {
   */
   buildModules: [
     '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
   ],
   /*
@@ -53,14 +51,23 @@ module.exports = {
   */
   axios: {
   },
-  /*
-  ** Build configuration
-  */
   build: {
     /*
     ** You can extend webpack config here
     */
     // extend(config, ctx) {
     // },
+  },
+
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      brands: [
+        'faGithub',
+        'faTwitter',
+        'faLinkedin',
+        'faInstagram',
+      ],
+    },
   },
 };

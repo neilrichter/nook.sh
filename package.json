@@ -5,6 +5,7 @@
   "author": "Neil Richter",
   "private": true,
   "scripts": {
+    "nuxt": "nuxt",
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
@@ -20,9 +21,11 @@
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/tailwindcss": "^1.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",

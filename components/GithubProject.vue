@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <Navbar />
-    <nuxt />
-  </div>
+  <div class="github-project" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
-import Navbar from '@/components/Navbar.vue';
+
+interface Props {
+
+}
 
 export default defineComponent({
-  name: 'DefaultLayout',
-  components: { Navbar },
+  name: 'GithubComponent',
 });
 </script>
 
 <style>
+
 </style>
