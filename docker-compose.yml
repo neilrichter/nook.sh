@@ -1,29 +1,41 @@
-version: '3'
+version: "3"
 
 services:
-    node:
-        image: node:13
+    nuxt:
+        build: ./app
+        container_name: nook.sh-website
+        restart: always
+        ports:
+            - 3000:3000
         volumes:
-            - ./app:/usr/
+            - ./app:/app
+            - /app/node_modules
+        command: npm run nuxt
         tty: true
+        environment:
+            NODE_ENV: ${NODE_ENV}
+
+
     nginx:
-        build:
-            context: ./nginx
-            args:
-                - WEB_REVERSE_PROXY_PORT=3000
-        volumes:
-            - ./data/logs/nginx/:/var/log/nginx
+        image: nginx:latest
+        restart: always
+        container_name: nook.sh-nginx
         ports:
             - 80:80
-            - 443:443
-        tty: true
-    postgresql:
-        image: postgres:12
         volumes:
-            - ./data/postgresql/:/var/lib/postgresql
+            - ./nginx:/etc/nginx/conf.d
+        depends_on:
+            - nuxt
+
+    db:
+        image: postgres
+        container_name: nook.sh-postgres
+        restart: always
         ports:
             - 5432:5432
         environment:
-            - POSTGRES_PASSWORD=root
-            - POSTGRES_USER=root
-            - POSTGRES_DB=nooksh
+            POSTGRES_USER: ${DB_USER}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_DB: ${DB_NAME}
+        volumes:
+            - ./data:/var/lib/postgresql/data

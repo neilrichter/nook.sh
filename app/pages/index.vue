@@ -2,7 +2,7 @@
   <div class="text-main">
     <header class="px-4 py-20 text-center">
       <h1 class="text-4xl font-bold">
-        Hi! I'm <span class="text-accent">Neil Richter</span>
+        Hi! I'm <span class="text-accent">Nook Richter</span>
       </h1>
       <h2 class="text-xl">
         Front-End Developer @<a href="https://golem.ai" class="underline">Golem.ai</a>

@@ -1,3 +1,5 @@
+const { resolve } = require('path');
+
 module.exports = {
   root: true,
   env: {
@@ -17,7 +19,7 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['@', '.'],
+          ['@', resolve(__dirname)],
         ],
         extensions: ['.ts', '.js', '.vue', '.json']
       }
