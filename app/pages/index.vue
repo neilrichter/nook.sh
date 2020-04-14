@@ -2,7 +2,7 @@
   <div class="text-main">
     <header class="px-4 py-20 text-center">
       <h1 class="text-4xl font-bold">
-        Hi! I'm <span class="text-accent">Nook Richter</span>
+        Hi! I'm <span class="text-accent">Neil Richter</span>
       </h1>
       <h2 class="text-xl">
         Front-End Developer @<a href="https://golem.ai" class="underline">Golem.ai</a>
@@ -44,21 +44,51 @@
         <h2 class="text-2xl text-main text-center font-bold">
           Top projects
         </h2>
-        <h3 class="text-center text-subtitle">
+        <h3 class="text-center text-content">
           Pinned repositories on Github
         </h3>
+        <div
+          class="my-5 px-3 lg-px-20 projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          <GithubProject
+            v-for="(project, index) in projects"
+            :key="index"
+            :project="project"
+          />
+        </div>
       </section>
     </main>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
-import Logo from '@/components/Logo.vue';
+import { Context } from '@nuxt/types';
+import { defineComponent, ref } from '@vue/composition-api';
+import { Query, UserPinnedRepositoriesQuery, Repository } from 'types/github';
+import GithubProject from '@/components/GithubProject.vue';
+import query from '@/server/query';
 
 export default defineComponent({
   name: 'Index',
-  components: { Logo },
+  components: { GithubProject },
+  asyncData(context: Context) {
+    return context.$axios.$post<Query<UserPinnedRepositoriesQuery>>('https://api.github.com/graphql', {
+      query,
+    }, {
+      headers: {
+        Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+      },
+    })
+      .then((data) => ({ projects: data.data.user.pinnedItems.nodes }))
+      .catch(() => {});
+  },
+  setup() {
+    const projects = ref<Repository[]>([]);
+
+    return {
+      projects,
+    };
+  },
 });
 </script>
 

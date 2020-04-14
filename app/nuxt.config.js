@@ -48,6 +48,10 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
   ],
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true,
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -58,8 +62,6 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    // extend(config, ctx) {
-    // },
   },
 
   fontawesome: {
@@ -70,6 +72,10 @@ module.exports = {
         'faTwitter',
         'faLinkedin',
         'faInstagram',
+      ],
+      solid: [
+        'faStar',
+        'faLink',
       ],
     },
   },

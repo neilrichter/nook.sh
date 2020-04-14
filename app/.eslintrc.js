@@ -20,6 +20,7 @@ module.exports = {
       alias: {
         map: [
           ['@', resolve(__dirname)],
+          ['types', resolve(__dirname, 'types')],
         ],
         extensions: ['.ts', '.js', '.vue', '.json']
       }

@@ -10,10 +10,11 @@ services:
         volumes:
             - ./app:/app
             - /app/node_modules
-        command: npm run nuxt
+        command: npm run dev
         tty: true
         environment:
             NODE_ENV: ${NODE_ENV}
+            GITHUB_TOKEN: ${GITHUB_TOKEN}
 
 
     nginx:
