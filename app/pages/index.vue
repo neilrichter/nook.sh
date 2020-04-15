@@ -19,22 +19,22 @@
         </p>
         <ul class="social text-3xl flex justify-center">
           <li class="mx-2">
-            <a class="p-2" target="_blank" href="https://github.com/noook">
+            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="https://github.com/noook">
               <fa :icon="['fab', 'github']" />
             </a>
           </li>
           <li class="mx-2">
-            <a class="p-2" target="_blank" href="">
+            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="">
               <fa :icon="['fab', 'twitter']" />
             </a>
           </li>
           <li class="mx-2">
-            <a class="p-2" target="_blank" href="https://www.instagram.com/neil_rcht">
+            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="https://www.instagram.com/neil_rcht">
               <fa :icon="['fab', 'instagram']" />
             </a>
           </li>
           <li class="mx-2">
-            <a class="p-2" target="_blank" href="https://www.linkedin.com/in/neilrichter">
+            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="https://www.linkedin.com/in/neilrichter">
               <fa :icon="['fab', 'linkedin']" />
             </a>
           </li>
@@ -48,7 +48,7 @@
           Pinned repositories on Github
         </h3>
         <div
-          class="my-5 px-20 lg-px-40 projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          class="my-5 px-5 lg:px-20 xl:px-40 projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           <GithubProject
             v-for="(project, index) in projects"
