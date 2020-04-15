@@ -6,16 +6,18 @@
 */
 module.exports = {
   theme: {
-    colors: {
-      accent: '#ef5e76',
-      main: '#37474f',
-      white: '#ffffff',
-      yellow: '#FFD600',
-      black: '#000000',
-      lightgray: '#F1F6F8',
-      content: {
-        lighter: '#78909C',
-        default: '#37474F',
+    extend: {
+      colors: {
+        accent: '#ef5e76',
+        main: '#37474f',
+        white: '#ffffff',
+        yellow: '#FFD600',
+        black: '#000000',
+        lightgray: '#F1F6F8',
+        content: {
+          lighter: '#78909C',
+          default: '#37474F',
+        },
       },
     },
   },

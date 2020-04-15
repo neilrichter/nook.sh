@@ -13,7 +13,8 @@ module.exports = {
   // add your custom rules here
   rules: {
     'import/no-extraneous-dependencies': 'off',
-    'nuxt/no-cjs-in-config': 'off'
+    'nuxt/no-cjs-in-config': 'off',
+    'max-len': 'off',
   },
   settings: {
     'import/resolver': {
