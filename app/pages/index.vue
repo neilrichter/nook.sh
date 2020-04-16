@@ -1,8 +1,8 @@
 <template>
-  <div class="text-main">
+  <div class="text-content">
     <header class="px-4 py-20 text-center">
       <h1 class="text-4xl font-bold">
-        Hi! I'm <span class="text-accent">Neil Richter</span>
+        Hi! I'm <span class="text-accent">Neil&nbsp;Richter</span>
       </h1>
       <h2 class="text-xl">
         Front-End Developer @<a href="https://golem.ai" class="underline">Golem.ai</a>
@@ -17,38 +17,17 @@
           I love working on side projects to improve my skills.
           I love swimming, music and developing things.
         </p>
-        <ul class="social text-3xl flex justify-center">
-          <li class="mx-2">
-            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="https://github.com/noook">
-              <fa :icon="['fab', 'github']" />
-            </a>
-          </li>
-          <li class="mx-2">
-            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="">
-              <fa :icon="['fab', 'twitter']" />
-            </a>
-          </li>
-          <li class="mx-2">
-            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="https://www.instagram.com/neil_rcht">
-              <fa :icon="['fab', 'instagram']" />
-            </a>
-          </li>
-          <li class="mx-2">
-            <a class="p-2 hover:opacity-50 duration-200 ease-out" target="_blank" href="https://www.linkedin.com/in/neilrichter">
-              <fa :icon="['fab', 'linkedin']" />
-            </a>
-          </li>
-        </ul>
+        <Socials class="text-3xl" />
       </section>
-      <section id="pinned-repositories" class="my-3 p-4">
-        <h2 class="text-2xl text-main text-center font-bold">
+      <section id="pinned-repositories text-content" class="my-3 p-4">
+        <h2 class="text-2xl text-center font-bold">
           Top projects
         </h2>
-        <h3 class="text-center text-content">
+        <h3 class="text-center">
           Pinned repositories on Github
         </h3>
         <div
-          class="my-5 px-5 lg:px-20 xl:px-40 projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          class="my-5 px-5 lg:px-20 xl:px-64 projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           <GithubProject
             v-for="(project, index) in projects"
@@ -66,11 +45,12 @@ import { Context } from '@nuxt/types';
 import { defineComponent, ref } from '@vue/composition-api';
 import { Query, UserPinnedRepositoriesQuery, Repository } from 'types/github';
 import GithubProject from '@/components/GithubProject.vue';
+import Socials from '@/components/Socials.vue';
 import query from '@/server/query';
 
 export default defineComponent({
   name: 'Index',
-  components: { GithubProject },
+  components: { GithubProject, Socials },
   asyncData(context: Context) {
     return context.$axios.$post<Query<UserPinnedRepositoriesQuery>>('https://api.github.com/graphql', {
       query,
