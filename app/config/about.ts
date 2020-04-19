@@ -35,3 +35,63 @@ export const experiences: Experience[] = [
     description: 'Redesign of the AI configuration interface, implementation of design systems, development of products used by projects carried out by Golem.ai',
   },
 ];
+
+export interface Skill {
+  class: string;
+  name: string;
+}
+
+export const skills: Skill[] = [
+  {
+    class: 'devicon-docker-plain-wordmark',
+    name: 'Docker',
+  },
+  {
+    class: 'devicon-javascript-plain',
+    name: 'Javascript',
+  },
+  {
+    class: 'devicon-typescript-plain',
+    name: 'Typescript',
+  },
+  {
+    class: 'devicon-symfony-original',
+    name: 'Symfony',
+  },
+  {
+    class: 'devicon-php-plain',
+    name: 'PHP',
+  },
+  {
+    class: 'devicon-nodejs-plain',
+    name: 'Node.js',
+  },
+  {
+    class: 'devicon-go-line',
+    name: 'Golang',
+  },
+  {
+    class: 'devicon-vuejs-plain',
+    name: 'Vue.js',
+  },
+  {
+    class: 'devicon-sass-original',
+    name: 'Sass',
+  },
+  {
+    class: 'devicon-git-plain',
+    name: 'Git',
+  },
+  {
+    class: 'devicon-nginx-original',
+    name: 'Nginx',
+  },
+  {
+    class: 'devicon-postgresql-plain',
+    name: 'PostgreSQL',
+  },
+  {
+    class: 'devicon-python-plain',
+    name: 'Python',
+  },
+];

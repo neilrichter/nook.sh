@@ -84,6 +84,16 @@
           </li>
         </ul>
       </section>
+      <section id="skills" class="p-8 flex flex-col items-center">
+        <h2 class="text-bold text-4xl text-center my-10">
+          Skills
+        </h2>
+        <ul class="grid lg:w-1/2 grid-cols-3 lg:mx-20 text-center gap-16">
+          <li v-for="skill in skills" :key="skill.name" :title="skill.name">
+            <i :class="['text-5xl', 'lg:text-6xl', skill.class, 'colored']" />
+          </li>
+        </ul>
+      </section>
     </main>
   </div>
 </template>
@@ -92,7 +102,10 @@
 import { defineComponent, computed, ref } from '@vue/composition-api';
 import Socials from '@/components/Socials.vue';
 import getMonthDiff from '@/hooks/date-duration';
-import { birth, experiences, Experience } from '@/config/about';
+import {
+  birth, experiences, skills, Experience,
+} from '@/config/about';
+import 'devicon';
 
 export default defineComponent({
   name: 'About',
@@ -125,6 +138,7 @@ export default defineComponent({
     return {
       age,
       experiences: ref(experiences.sort((a, b) => +b.start - +a.start)),
+      skills: ref(skills),
       getReadbleDiff,
       getYearMonthDate,
     };
