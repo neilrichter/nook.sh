@@ -52,25 +52,33 @@
           </div>
         </div>
       </section>
-      <section id="experience" class="p-3 px-8">
-        <h2 class="text-bold text-4xl text-center">
+      <section id="experience" class="p-3 px-8 lg:flex flex-col lg:items-center">
+        <h2 class="text-bold text-4xl text-center my-5">
           Experience
         </h2>
-        <ul class="experiences">
+        <ul class="experiences lg:w-2/3">
           <li v-for="(experience, index) in experiences" :key="index">
-            <article class="my-5 p-5 border rounded shadow-sm">
-              <div class="duration hidden lg:flex">
+            <article
+              class="my-5 p-8 lg:p-0 border rounded lg:border-0 shadow-sm lg:shadow-none lg:flex items-center justify-end"
+            >
+              <div class="capitalize hidden lg:flex shadow-xl text-center mr-16 bg-accent p-10 text-white font-bold text-xl">
                 {{ getReadbleDiff(experience) }}
               </div>
               <div class="content">
                 <h2 class="text-4xl">
                   {{ experience.company }}
                 </h2>
-                <h3 class="text-2xl my-2 font-medium">
-                  {{ experience.title }}
-                </h3>
-                <h4>{{ getYearMonthDate(experience.start) }} — {{ experience.end ? getYearMonthDate(experience.end) : 'Present' }}</h4>
-                <p>{{ experience.description }}</p>
+                <div class="headings lg:flex items-center">
+                  <h3 class="text-2xl my-2 font-medium">
+                    {{ experience.title }}
+                  </h3>
+                  <h4 class="lg:text-xl lg:ml-5">
+                    {{ getYearMonthDate(experience.start) }} — {{ experience.end ? getYearMonthDate(experience.end) : 'Present' }}
+                  </h4>
+                </div>
+                <p class="my-2">
+                  {{ experience.description }}
+                </p>
               </div>
             </article>
           </li>
@@ -116,7 +124,7 @@ export default defineComponent({
 
     return {
       age,
-      experiences: ref(experiences),
+      experiences: ref(experiences.sort((a, b) => +b.start - +a.start)),
       getReadbleDiff,
       getYearMonthDate,
     };
