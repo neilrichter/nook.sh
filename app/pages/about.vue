@@ -56,27 +56,69 @@
         <h2 class="text-bold text-4xl text-center">
           Experience
         </h2>
+        <ul class="experiences">
+          <li v-for="(experience, index) in experiences" :key="index">
+            <article class="my-5 p-5 border rounded shadow-sm">
+              <div class="duration hidden lg:flex">
+                {{ getReadbleDiff(experience) }}
+              </div>
+              <div class="content">
+                <h2 class="text-4xl">
+                  {{ experience.company }}
+                </h2>
+                <h3 class="text-2xl my-2 font-medium">
+                  {{ experience.title }}
+                </h3>
+                <h4>{{ getYearMonthDate(experience.start) }} — {{ experience.end ? getYearMonthDate(experience.end) : 'Present' }}</h4>
+                <p>{{ experience.description }}</p>
+              </div>
+            </article>
+          </li>
+        </ul>
       </section>
     </main>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from '@vue/composition-api';
+import { defineComponent, computed, ref } from '@vue/composition-api';
 import Socials from '@/components/Socials.vue';
+import getMonthDiff from '@/hooks/date-duration';
+import { birth, experiences, Experience } from '@/config/about';
 
 export default defineComponent({
   name: 'About',
   components: { Socials },
   setup() {
     const age = computed(() => {
-      const birth = new Date('08/14/1999');
-      const difference = new Date(Date.now() - +birth);
+      const { day, month, year } = birth;
+      const difference = new Date(Date.now() - +new Date(`${month}/${day}/${year}`));
       return difference.getFullYear() - 1970;
     });
 
+    function getReadbleDiff(experience: Experience): string {
+      const monthDiff = getMonthDiff(experience.start, experience.end || new Date());
+      const result = {
+        year: Math.floor(monthDiff / 12),
+        months: monthDiff % 12,
+      };
+      const years = result.year ? `${result.year} year${result.year > 1 ? 's' : ''} ` : '';
+      const months = result.months ? `${result.months} month${result.months > 1 ? 's' : ''}` : '';
+
+      return `${years}${months}`;
+    }
+
+    function getYearMonthDate(date: Date): string {
+      const year = date.getFullYear();
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      return `${year}-${month}`;
+    }
+
     return {
       age,
+      experiences: ref(experiences),
+      getReadbleDiff,
+      getYearMonthDate,
     };
   },
 });

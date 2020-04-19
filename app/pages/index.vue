@@ -11,7 +11,7 @@
     <main class="my-5">
       <section id="about" class="my-3 p-4 bg-lightgray flex flex-col items-center">
         <img class="rounded-full w-40 my-3" src="https://i.nook.sh/pp-squared.jpg" alt="">
-        <p class="text-justify text-lg my-5 mx-10">
+        <p class="w-2/4 text-center text-lg my-5 mx-10">
           I'm a 20 years old Front-End developer based in Paris, working at
           <a class="font-bold hover:underline" href="https://golem.ai">Golem.ai</a>.
           I love working on side projects to improve my skills.
