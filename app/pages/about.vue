@@ -7,6 +7,8 @@
       <section id="description" class="bg-lightgray py-3 px-8 lg:py-5 lg:flex justify-center">
         <div class="lg:w-8/12 lg:grid grid-cols-3">
           <div class="left lg:flex flex-col justify-center">
+            <!-- <div class="flex justify-center"> -->
+            <!-- </div> -->
             <h2 class="text-4xl font-bold text-center lg:text-left whitespace-no-wrap">
               Neil Richter
             </h2>
@@ -30,7 +32,7 @@
               :li-class="['mx-0', 'mr-4']"
             />
           </div>
-          <div class="right col-span-2 mt-10 lg:mt-0">
+          <div class="right col-span-2 mt-10 lg:mt-0 lg:ml-12">
             <h3 class="my-3 font-bold">
               Hello !
             </h3>
@@ -58,29 +60,7 @@
         </h2>
         <ul class="experiences lg:w-2/3">
           <li v-for="(experience, index) in experiences" :key="index">
-            <article
-              class="my-5 p-8 lg:p-0 border rounded lg:border-0 shadow-sm lg:shadow-none lg:flex items-center justify-end"
-            >
-              <div class="capitalize hidden lg:flex shadow-xl text-center mr-16 bg-accent p-10 text-white font-bold text-xl">
-                {{ getReadbleDiff(experience) }}
-              </div>
-              <div class="content">
-                <h2 class="text-4xl">
-                  {{ experience.company }}
-                </h2>
-                <div class="headings lg:flex items-center">
-                  <h3 class="text-2xl my-2 font-medium">
-                    {{ experience.title }}
-                  </h3>
-                  <h4 class="lg:text-xl lg:ml-5">
-                    {{ getYearMonthDate(experience.start) }} — {{ experience.end ? getYearMonthDate(experience.end) : 'Present' }}
-                  </h4>
-                </div>
-                <p class="my-2">
-                  {{ experience.description }}
-                </p>
-              </div>
-            </article>
+            <HistoryEntry :item="experience" />
           </li>
         </ul>
       </section>
@@ -89,8 +69,27 @@
           Skills
         </h2>
         <ul class="grid lg:w-1/2 grid-cols-3 lg:mx-20 text-center gap-16">
-          <li v-for="skill in skills" :key="skill.name" :title="skill.name">
-            <i :class="['text-5xl', 'lg:text-6xl', skill.class, 'colored']" />
+          <li
+            v-for="skill in skills"
+            :key="skill.name"
+            class="flex justify-center items-center"
+            :title="skill.name"
+          >
+            <img
+              class="lg:w-24"
+              :src="require(`@/assets/img/icons/${skill.class}/${skill.class}-original.svg`)"
+              :alt="skill.name"
+            >
+          </li>
+        </ul>
+      </section>
+      <section id="education" class="p-3 px-8 lg:flex flex-col lg:items-center">
+        <h2 class="text-bold text-4xl text-center my-5">
+          Education
+        </h2>
+        <ul class="education lg:w-2/3">
+          <li v-for="(formation, index) in education" :key="index">
+            <HistoryEntry :item="formation" />
           </li>
         </ul>
       </section>
@@ -101,15 +100,15 @@
 <script lang="ts">
 import { defineComponent, computed, ref } from '@vue/composition-api';
 import Socials from '@/components/Socials.vue';
-import getMonthDiff from '@/hooks/date-duration';
+import HistoryEntry from '@/components/HistoryEntry.vue';
 import {
-  birth, experiences, skills, Experience,
+  birth, experiences, skills, education,
 } from '@/config/about';
 import 'devicon';
 
 export default defineComponent({
   name: 'About',
-  components: { Socials },
+  components: { HistoryEntry, Socials },
   setup() {
     const age = computed(() => {
       const { day, month, year } = birth;
@@ -117,30 +116,11 @@ export default defineComponent({
       return difference.getFullYear() - 1970;
     });
 
-    function getReadbleDiff(experience: Experience): string {
-      const monthDiff = getMonthDiff(experience.start, experience.end || new Date());
-      const result = {
-        year: Math.floor(monthDiff / 12),
-        months: monthDiff % 12,
-      };
-      const years = result.year ? `${result.year} year${result.year > 1 ? 's' : ''} ` : '';
-      const months = result.months ? `${result.months} month${result.months > 1 ? 's' : ''}` : '';
-
-      return `${years}${months}`;
-    }
-
-    function getYearMonthDate(date: Date): string {
-      const year = date.getFullYear();
-      const month = (date.getMonth() + 1).toString().padStart(2, '0');
-      return `${year}-${month}`;
-    }
-
     return {
       age,
       experiences: ref(experiences.sort((a, b) => +b.start - +a.start)),
-      skills: ref(skills),
-      getReadbleDiff,
-      getYearMonthDate,
+      skills,
+      education,
     };
   },
 });

@@ -1,4 +1,4 @@
-export interface Experience {
+export interface HistoryEntry {
   company: string;
   title: string;
   start: Date;
@@ -12,7 +12,7 @@ export const birth = {
   day: 14,
 };
 
-export const experiences: Experience[] = [
+export const experiences: HistoryEntry[] = [
   {
     company: 'Zest',
     start: new Date(2018, 6 - 1),
@@ -36,6 +36,23 @@ export const experiences: Experience[] = [
   },
 ];
 
+export const education: HistoryEntry[] = [
+  {
+    company: 'Lycée Privé Robert Schuman',
+    start: new Date(2015, 9 - 1),
+    end: new Date(2017, 8 - 1),
+    title: 'High-school',
+    description: 'Bachelor\'s degree of Science and Technology in Industry and Sustainable Development, mention Very Good',
+  },
+  {
+    company: 'SUP\'Internet',
+    start: new Date(2017, 9 - 1),
+    end: new Date(2020, 5 - 1),
+    title: 'Web Project Management Bachelor',
+    description: 'Web project Management Bachelor, specialized in Web Development',
+  },
+];
+
 export interface Skill {
   class: string;
   name: string;
@@ -43,55 +60,55 @@ export interface Skill {
 
 export const skills: Skill[] = [
   {
-    class: 'devicon-docker-plain-wordmark',
+    class: 'docker',
     name: 'Docker',
   },
   {
-    class: 'devicon-javascript-plain',
+    class: 'javascript',
     name: 'Javascript',
   },
   {
-    class: 'devicon-typescript-plain',
+    class: 'typescript',
     name: 'Typescript',
   },
   {
-    class: 'devicon-symfony-original',
+    class: 'symfony',
     name: 'Symfony',
   },
   {
-    class: 'devicon-php-plain',
+    class: 'php',
     name: 'PHP',
   },
   {
-    class: 'devicon-nodejs-plain',
+    class: 'nodejs',
     name: 'Node.js',
   },
   {
-    class: 'devicon-go-line',
+    class: 'go',
     name: 'Golang',
   },
   {
-    class: 'devicon-vuejs-plain',
+    class: 'vuejs',
     name: 'Vue.js',
   },
   {
-    class: 'devicon-sass-original',
+    class: 'sass',
     name: 'Sass',
   },
   {
-    class: 'devicon-git-plain',
+    class: 'git',
     name: 'Git',
   },
   {
-    class: 'devicon-nginx-original',
+    class: 'nginx',
     name: 'Nginx',
   },
   {
-    class: 'devicon-postgresql-plain',
+    class: 'postgresql',
     name: 'PostgreSQL',
   },
   {
-    class: 'devicon-python-plain',
+    class: 'python',
     name: 'Python',
   },
 ];
