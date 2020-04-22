@@ -1,3 +1,8 @@
+const description = `Hello !
+
+My name is Neil Richter and I'm a 20 years old Full-stack Developer based in Paris. I describe myself as a curious person who loves coding, and the web platform. Currently, I am working at a company called Golem.ai as a Front-End Engineer.
+`;
+
 module.exports = {
   mode: 'universal',
   server: {
@@ -6,12 +11,24 @@ module.exports = {
   /*
   ** Headers of the page
   */
+
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Neil Richter | Front-End Engineer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://nook.sh/' },
+      { property: 'og:title', content: 'Neil Richter | Front-End Engineer' },
+      { property: 'og:description', content: description },
+      { property: 'og:image', content: 'https://i.nook.sh/pp-banner.jpg' },
+
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:url', content: 'https://nook.sh' },
+      { property: 'twitter:title', content: 'Neil Richter | Front-End Engineer' },
+      { property: 'twitter:description', content: description },
+      { property: 'twitter:image', content: 'https://i.nook.sh/pp-banner.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

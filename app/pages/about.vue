@@ -42,7 +42,7 @@
             <p class="mb-4">
               My name is <span class="text-accent">Neil Richter</span> and I'm a {{ age }} years old
               <span class="text-accent">Full-stack Developer</span> based in Paris. I describe myself as
-              a full-stack developer who loves coding, and the web platform. Currently, I am working at a
+              a curious person who loves coding, and the web platform. Currently, I am working at a
               company called <a class="text-accent underline" href="https://golem.ai">Golem.ai</a> as a
               <span class="text-accent">Front-End Engineer</span>.
             </p>
