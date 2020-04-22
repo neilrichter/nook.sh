@@ -31,7 +31,7 @@ export const experiences: HistoryEntry[] = [
     company: 'Golem.ai',
     start: new Date(2020, 1 - 1),
     end: null,
-    title: 'Front-end developer',
+    title: 'Front-end Engineer',
     description: 'Redesign of the AI configuration interface, implementation of design systems, development of products used by projects carried out by Golem.ai',
   },
 ];

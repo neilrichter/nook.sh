@@ -15,7 +15,7 @@
           I'm a 20 years old Front-End engineer based in Paris, working at
           <a class="font-bold hover:underline" href="https://golem.ai">Golem.ai</a>.
           I love working on side projects to improve my skills.
-          I love swimming, music and developing things.
+          I love swimming, music and spicy food.
         </p>
         <Socials class="text-3xl" />
       </section>

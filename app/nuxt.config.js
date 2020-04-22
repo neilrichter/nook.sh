@@ -26,13 +26,13 @@ module.exports = {
   */
   css: [
     '~/assets/css/global.css',
-    '@fortawesome/fontawesome/styles.css',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     '~/plugins/composition-api',
+    '~/plugins/fontawesome',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -73,17 +73,5 @@ module.exports = {
 
   fontawesome: {
     component: 'fa',
-    icons: {
-      brands: [
-        'faGithub',
-        'faTwitter',
-        'faLinkedin',
-        'faInstagram',
-      ],
-      solid: [
-        'faStar',
-        'faLink',
-      ],
-    },
   },
 };

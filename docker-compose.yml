@@ -27,16 +27,3 @@ services:
             - ./nginx:/etc/nginx/conf.d
         depends_on:
             - nuxt
-
-    db:
-        image: postgres
-        container_name: nook.sh-postgres
-        restart: always
-        ports:
-            - 5432:5432
-        environment:
-            POSTGRES_USER: ${DB_USER}
-            POSTGRES_PASSWORD: ${DB_PASSWORD}
-            POSTGRES_DB: ${DB_NAME}
-        volumes:
-            - ./data:/var/lib/postgresql/data
