@@ -17,7 +17,7 @@
           {{ getYearMonthDate(item.start) }} — {{ item.end ? getYearMonthDate(item.end) : 'Present' }}
         </h4>
       </div>
-      <p class="my-2">
+      <p class="my-2 text-lg">
         {{ item.description }}
       </p>
     </div>

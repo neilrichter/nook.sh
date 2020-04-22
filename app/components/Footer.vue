@@ -6,6 +6,9 @@
       </h2>
       <ul class="my-3 flex items-cente justify-center uppercase text-xs font-semibold">
         <li class="mx-2 lg:ml-0 lg:mr-4 text-link">
+          <!-- <a href="/">
+            Home
+          </a> -->
           <nuxt-link to="/">
             Home
           </nuxt-link>

@@ -47,7 +47,7 @@ export const education: HistoryEntry[] = [
   {
     company: 'SUP\'Internet',
     start: new Date(2017, 9 - 1),
-    end: new Date(2020, 5 - 1),
+    end: new Date(2020, 8 - 1),
     title: 'Web Project Management Bachelor',
     description: 'Web project Management Bachelor, specialized in Web Development',
   },
@@ -60,8 +60,8 @@ export interface Skill {
 
 export const skills: Skill[] = [
   {
-    class: 'docker',
-    name: 'Docker',
+    class: 'vuejs',
+    name: 'Vue.js',
   },
   {
     class: 'javascript',
@@ -84,24 +84,24 @@ export const skills: Skill[] = [
     name: 'Node.js',
   },
   {
-    class: 'go',
-    name: 'Golang',
-  },
-  {
-    class: 'vuejs',
-    name: 'Vue.js',
+    class: 'nginx',
+    name: 'Nginx',
   },
   {
     class: 'sass',
     name: 'Sass',
   },
   {
+    class: 'docker',
+    name: 'Docker',
+  },
+  {
     class: 'git',
     name: 'Git',
   },
   {
-    class: 'nginx',
-    name: 'Nginx',
+    class: 'go',
+    name: 'Golang',
   },
   {
     class: 'postgresql',

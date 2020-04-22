@@ -5,21 +5,24 @@
     </header>
     <main>
       <section id="description" class="bg-lightgray py-3 px-8 lg:py-5 lg:flex justify-center">
-        <div class="lg:w-8/12 lg:grid grid-cols-3">
+        <div class="lg:w-8/12 lg:flex">
           <div class="left lg:flex flex-col justify-center">
-            <!-- <div class="flex justify-center"> -->
-            <!-- </div> -->
+            <img
+              class="rounded-full w-40 my-4 mx-auto"
+              src="https://i.nook.sh/pp-squared.jpg"
+              alt="Neil Richter's profile picture"
+            >
             <h2 class="text-4xl font-bold text-center lg:text-left whitespace-no-wrap">
               Neil Richter
             </h2>
-            <ul class="my-2">
+            <ul class="my-2 text-lg">
               <li class="my-1">
                 <label class="mr-1">Age:</label>
                 <span>{{ age }}</span>
               </li>
               <li class="my-1">
                 <label claass="mr-1">Job:</label>
-                <span>Front-End Developer</span>
+                <span>Front-End Engineer</span>
               </li>
               <li class="my-1">
                 <label class="mr-1">Company:</label>
@@ -27,12 +30,12 @@
               </li>
             </ul>
             <Socials
-              class="text-2xl lg:text-3xl justify-start"
+              class="text-2xl lg:text-3xl my-4 justify-evenly lg:justify-start"
               :link-class="['p-1']"
               :li-class="['mx-0', 'mr-4']"
             />
           </div>
-          <div class="right col-span-2 mt-10 lg:mt-0 lg:ml-12">
+          <div class="right flex-grow mt-10 lg:mt-0 lg:ml-16 flex flex-col justify-center text-lg text-justify">
             <h3 class="my-3 font-bold">
               Hello !
             </h3>
@@ -41,7 +44,7 @@
               <span class="text-accent">Full-stack Developer</span> based in Paris. I describe myself as
               a full-stack developer who loves coding, and the web platform. Currently, I am working at a
               company called <a class="text-accent underline" href="https://golem.ai">Golem.ai</a> as a
-              <span class="text-accent">Front-End Developer</span>.
+              <span class="text-accent">Front-End Engineer</span>.
             </p>
             <p class="mb-4">
               In my spare time I do a lot of sports, and I also like to work on side projects.
@@ -120,7 +123,7 @@ export default defineComponent({
       age,
       experiences: ref(experiences.sort((a, b) => +b.start - +a.start)),
       skills,
-      education,
+      education: ref(education.sort((a, b) => +b.start - +a.start)),
     };
   },
 });

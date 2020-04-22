@@ -5,14 +5,14 @@
         Hi! I'm <span class="text-accent">Neil&nbsp;Richter</span>
       </h1>
       <h2 class="text-xl">
-        Front-End Developer @<a href="https://golem.ai" class="underline">Golem.ai</a>
+        Front-End Engineer @<a href="https://golem.ai" class="underline">Golem.ai</a>
       </h2>
     </header>
     <main class="my-5">
       <section id="about" class="my-3 p-4 bg-lightgray flex flex-col items-center">
         <img class="rounded-full w-40 my-3" src="https://i.nook.sh/pp-squared.jpg" alt="">
-        <p class="w-2/4 text-center text-lg my-5 mx-10">
-          I'm a 20 years old Front-End developer based in Paris, working at
+        <p class="w-3/4 lg:w-1/2 text-lg lg:text-center my-5 mx-10">
+          I'm a 20 years old Front-End engineer based in Paris, working at
           <a class="font-bold hover:underline" href="https://golem.ai">Golem.ai</a>.
           I love working on side projects to improve my skills.
           I love swimming, music and developing things.
