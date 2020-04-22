@@ -30,7 +30,7 @@
           class="my-5 px-5 lg:px-20 xl:px-64 projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           <GithubProject
-            v-for="(project, index) in projects"
+            v-for="(project, index) in $store.state.projects"
             :key="index"
             :project="project"
           />
@@ -41,29 +41,15 @@
 </template>
 
 <script lang="ts">
-import { Context } from '@nuxt/types';
 import { defineComponent, ref } from '@vue/composition-api';
-import { Query, UserPinnedRepositoriesQuery, Repository } from 'types/github';
 import GithubProject from '@/components/GithubProject.vue';
 import Socials from '@/components/Socials.vue';
-import query from '@/server/query';
 
 export default defineComponent({
   name: 'Index',
   components: { GithubProject, Socials },
-  asyncData(context: Context) {
-    return context.$axios.$post<Query<UserPinnedRepositoriesQuery>>('https://api.github.com/graphql', {
-      query,
-    }, {
-      headers: {
-        Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-      },
-    })
-      .then((data) => ({ projects: data.data.user.pinnedItems.nodes }))
-      .catch(() => {});
-  },
   setup() {
-    const projects = ref<Repository[]>([]);
+    const projects = ref([]);
 
     return {
       projects,

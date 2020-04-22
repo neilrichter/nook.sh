@@ -1,6 +1,7 @@
 import {
   AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic,
 } from 'axios';
+import { accessorType } from '@/store';
 
 interface NuxtAxiosInstance extends AxiosStatic {
   $request<T = any>(config: AxiosRequestConfig): Promise<T>
@@ -26,7 +27,18 @@ declare module '@nuxt/types' {
   interface Context {
     $axios: NuxtAxiosInstance
   }
+
+  interface NuxtAppOptions {
+    $accessor: typeof accessorType
+  }
   interface NuxtAppOptions {
     $axios: NuxtAxiosInstance
+  }
+}
+
+
+declare module 'vue/types/vue' {
+  interface Vue {
+    $accessor: typeof accessorType
   }
 }

@@ -40,6 +40,7 @@ module.exports = {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
+    'nuxt-typed-vuex',
   ],
   /*
   ** Nuxt.js modules
@@ -59,9 +60,9 @@ module.exports = {
   axios: {
   },
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    transpile: [
+      /typed-vuex/,
+    ],
   },
 
   fontawesome: {

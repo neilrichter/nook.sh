@@ -19,7 +19,9 @@
     "cross-env": "^5.2.0",
     "devicon": "^2.2.0",
     "express": "^4.16.4",
-    "nuxt": "^2.12.2"
+    "nuxt": "^2.12.2",
+    "nuxt-typed-vuex": "^0.1.18",
+    "vuex": "^3.2.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
