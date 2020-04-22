@@ -49,10 +49,14 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
+    'nuxt-purgecss',
   ],
   typescript: {
     typeCheck: true,
     ignoreNotFoundWarnings: true,
+  },
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/],
   },
   /*
   ** Axios module configuration
@@ -64,6 +68,7 @@ module.exports = {
     transpile: [
       /typed-vuex/,
     ],
+    extractCSS: true,
   },
 
   fontawesome: {
