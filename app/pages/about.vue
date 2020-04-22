@@ -107,7 +107,6 @@ import HistoryEntry from '@/components/HistoryEntry.vue';
 import {
   birth, experiences, skills, education,
 } from '@/config/about';
-import 'devicon';
 
 export default defineComponent({
   name: 'About',

@@ -8,3 +8,7 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+.fas, .fab {
+  @apply text-md;
+}
