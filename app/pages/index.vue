@@ -9,7 +9,7 @@
       </h2>
     </header>
     <main class="my-5">
-      <section id="about" class="my-3 p-4 bg-lightgray flex flex-col items-center">
+      <div id="about" class="my-3 p-4 bg-lightgray flex flex-col items-center">
         <img class="rounded-full w-40 my-3" src="https://i.nook.sh/pp-squared.jpg" alt="">
         <p class="w-3/4 lg:w-1/2 text-lg lg:text-center my-5 mx-10">
           I'm a 20 years old Front-End engineer based in Paris, working at
@@ -18,8 +18,8 @@
           I love swimming, music and spicy food.
         </p>
         <Socials class="text-3xl" />
-      </section>
-      <section id="pinned-repositories text-content" class="my-3 p-4">
+      </div>
+      <section id="pinned-repositories" class="my-3 p-4 text-content">
         <h2 class="text-2xl text-center font-bold">
           Top projects
         </h2>

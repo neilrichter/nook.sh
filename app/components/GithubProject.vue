@@ -7,7 +7,12 @@
       <h3 class="font-bold hover:text-content-lighter duration-200">
         {{ project.name }}
       </h3>
-      <a :href="project.url" target="_blank" class="hover:text-link duration-200 ease-out">
+      <a
+        :href="project.url"
+        target="_blank"
+        rel="noopener"
+        class="hover:text-link duration-200 ease-out"
+      >
         <fa :icon="['fas', 'link']" />
       </a>
     </div>

@@ -8,10 +8,12 @@ module.exports = {
   server: {
     host: '0.0.0.0',
   },
+  htmlAttrs: {
+    lang: 'en',
+  },
   /*
   ** Headers of the page
   */
-
   head: {
     title: 'Neil Richter | Front-End Engineer',
     meta: [
