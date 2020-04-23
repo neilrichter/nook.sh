@@ -8,18 +8,19 @@ module.exports = {
   server: {
     host: '0.0.0.0',
   },
-  htmlAttrs: {
-    lang: 'en',
-  },
   /*
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
     title: 'Neil Richter | Front-End Engineer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: description },
+      { name: 'theme-color', content: '#ef5e76' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://nook.sh/' },
       { property: 'og:title', content: 'Neil Richter | Front-End Engineer' },
