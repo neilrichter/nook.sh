@@ -1,9 +1,12 @@
+import { Configuration } from '@nuxt/types/config';
+import getAge from '@/hooks/age';
+
 const description = `Hello !
 
-My name is Neil Richter and I'm a 20 years old Full-stack Developer based in Paris. I describe myself as a curious person who loves coding, and the web platform. Currently, I am working at a company called Golem.ai as a Front-End Engineer.
+My name is Neil Richter and I'm a ${getAge()} years old Full-stack Developer based in Paris. I describe myself as a curious person who loves coding, and the web platform. Currently, I am working at a company called Golem.ai as a Front-End Engineer.
 `;
 
-module.exports = {
+const config: Configuration = {
   mode: 'universal',
   server: {
     host: '0.0.0.0',
@@ -95,3 +98,5 @@ module.exports = {
     component: 'fa',
   },
 };
+
+export default config;

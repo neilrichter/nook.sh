@@ -12,7 +12,7 @@
       <div id="about" class="my-3 p-4 bg-lightgray flex flex-col items-center">
         <img class="rounded-full w-40 my-3" src="https://i.nook.sh/pp-squared.jpg" alt="">
         <p class="w-3/4 lg:w-1/2 text-lg lg:text-center my-5 mx-10">
-          I'm a 20 years old Front-End engineer based in Paris, working at
+          I'm a {{ age }} years old Front-End engineer based in Paris, working at
           <a class="font-bold hover:underline" href="https://golem.ai">Golem.ai</a>.
           I love working on side projects to improve my skills.
           I love swimming, music and spicy food.
@@ -44,6 +44,7 @@
 import { defineComponent, ref } from '@vue/composition-api';
 import GithubProject from '@/components/GithubProject.vue';
 import Socials from '@/components/Socials.vue';
+import getAge from '@/hooks/age';
 
 export default defineComponent({
   name: 'Index',
@@ -52,6 +53,7 @@ export default defineComponent({
     const projects = ref([]);
 
     return {
+      age: ref<number>(getAge()),
       projects,
     };
   },
