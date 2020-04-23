@@ -1,22 +1,22 @@
 <template>
   <ul class="socials flex">
     <li :class="li">
-      <a :class="a" target="_blank" href="https://github.com/noook">
+      <a :class="a" target="_blank" rel="noopener" href="https://github.com/noook">
         <fa :icon="['fab', 'github']" />
       </a>
     </li>
     <li :class="li">
-      <a :class="a" target="_blank" href="https://twitter.com/_nooooook">
+      <a :class="a" target="_blank" rel="noopener" href="https://twitter.com/_nooooook">
         <fa :icon="['fab', 'twitter']" />
       </a>
     </li>
     <li :class="li">
-      <a :class="a" target="_blank" href="https://www.instagram.com/neil_rcht">
+      <a :class="a" target="_blank" rel="noopener" href="https://www.instagram.com/neil_rcht">
         <fa :icon="['fab', 'instagram']" />
       </a>
     </li>
     <li :class="li">
-      <a :class="a" target="_blank" href="https://www.linkedin.com/in/neilrichter">
+      <a :class="a" target="_blank" rel="noopener" href="https://www.linkedin.com/in/neilrichter">
         <fa :icon="['fab', 'linkedin']" />
       </a>
     </li>
