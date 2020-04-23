@@ -14,7 +14,10 @@ module.exports = {
         accent: '#ef5e76',
         white: '#ffffff',
         yellow: '#FFD600',
-        link: '#00B0FF',
+        link: {
+          default: '#00B0FF',
+          contrast: '#005780',
+        },
         black: '#000000',
         lightgray: '#F1F6F8',
         content: {

@@ -5,17 +5,17 @@
         Neil Richter
       </h2>
       <ul class="my-3 flex items-cente justify-center uppercase text-xs font-semibold">
-        <li class="mx-2 lg:ml-0 lg:mr-4 text-link">
+        <li class="mx-2 lg:ml-0 lg:mr-4 text-link-contrast">
           <nuxt-link to="/">
             Home
           </nuxt-link>
         </li>
-        <li class="mx-2 lg:ml-0 lg:mr-4 text-link">
+        <li class="mx-2 lg:ml-0 lg:mr-4 text-link-contrast">
           <nuxt-link to="about">
             About me
           </nuxt-link>
         </li>
-        <li class="mx-2 lg:ml-0 lg:mr-4 text-link">
+        <li class="mx-2 lg:ml-0 lg:mr-4 text-link-contrast">
           <a href="#">Contact</a>
         </li>
       </ul>

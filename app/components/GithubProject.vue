@@ -13,6 +13,7 @@
         rel="noopener"
         class="hover:text-link duration-200 ease-out"
       >
+        <span class="visually-hidden">Link to {{ project.name }}'s github repository</span>
         <fa :icon="['fas', 'link']" />
       </a>
     </div>
