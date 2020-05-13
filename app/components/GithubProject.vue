@@ -20,7 +20,9 @@
     <div class="stats my-1 text-yellow">
       <fa :icon="['fas', 'star']" /> {{ project.stargazers.totalCount }}
     </div>
-    <p>{{ project.description }}</p>
+    <p v-if="project.description">
+      {{ project.description }}
+    </p>
   </article>
 </template>
 

@@ -9,7 +9,7 @@
           <div class="left lg:flex flex-col justify-center">
             <img
               class="rounded-full w-40 my-4 mx-auto"
-              src="https://i.nook.sh/pp-squared.jpg"
+              src="https://i.nook.sh/pp-squared@180.jpf"
               alt="Neil Richter's profile picture"
             >
             <h2 class="text-4xl font-bold text-center lg:text-left whitespace-no-wrap">
