@@ -10,11 +10,15 @@
     </header>
     <main class="my-5">
       <div id="about" class="my-3 p-4 bg-lightgray flex flex-col items-center">
-        <img
-          class="rounded-full w-40 my-3"
-          src="https://i.nook.sh/pp-squared@180.jpf"
-          alt="Neil Richter's profile picture"
-        >
+        <picture>
+          <source type="image/x-jpf" srcset="https://i.nook.sh/pp-squared@180.jpf">
+          <source type="image/webp" srcset="https://i.nook.sh/pp-squared@180.webp">
+          <img
+            class="rounded-full w-40 my-4 mx-auto"
+            src="https://i.nook.sh/pp-squared.jpg"
+            alt="Neil Richter's profile picture"
+          >
+        </picture>
         <p class="w-3/4 lg:w-1/2 text-lg lg:text-center my-5 mx-10">
           I'm a {{ age }} years old Front-End engineer based in Paris, working at
           <a class="font-bold hover:underline" href="https://golem.ai">Golem.ai</a>.
