@@ -1,4 +1,4 @@
-import { birth } from '@/config/about';
+import { birth } from '../config/about';
 
 export default function getAge(): number {
   const { day, month, year } = birth;
