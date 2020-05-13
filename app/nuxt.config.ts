@@ -1,5 +1,5 @@
 import { Configuration } from '@nuxt/types/config';
-import getAge from '@/hooks/age';
+import getAge from './hooks/age';
 
 const description = `Hello !
 
@@ -65,6 +65,9 @@ const config: Configuration = {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
     'nuxt-typed-vuex',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-166494693-1',
+    }],
   ],
   /*
   ** Nuxt.js modules
