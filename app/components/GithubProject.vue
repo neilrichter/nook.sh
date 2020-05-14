@@ -50,7 +50,7 @@ export default defineComponent<Props>({
   @apply duration-500 ease-out;
   @apply font-light text-content;
 
-  @apply border border-t-4;
+  @apply border-t-4;
 }
 
 .github-project.TypeScript {
