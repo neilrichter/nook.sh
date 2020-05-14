@@ -44,36 +44,36 @@ export default defineComponent<Props>({
 });
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .github-project {
   @apply px-5 py-10 rounded-sm shadow;
   @apply duration-500 ease-out;
   @apply font-light text-content;
 
   @apply border border-t-4;
+}
 
-  &.TypeScript {
-    border-color: #2b7489;
-  }
+.github-project.TypeScript {
+  border-color: #2b7489;
+}
 
-  &.JavaScript {
-    border-color: #f1e05a;
-  }
+.github-project.JavaScript {
+  border-color: #f1e05a;
+}
 
-  &.Vue {
-    border-color: #2c3e50;
-  }
+.github-project.Vue {
+  border-color: #2c3e50;
+}
 
-  &.Go {
-    border-color: #00ADD8;
-  }
+.github-project.Go {
+  border-color: #00ADD8;
+}
 
-  &.Shell {
-    border-color: #89e051;
-  }
+.github-project.Shell {
+  border-color: #89e051;
+}
 
-  &.PHP {
-    border-color: #4F5D95;
-  }
+.github-project.PHP {
+  border-color: #4F5D95;
 }
 </style>
