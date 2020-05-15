@@ -4,7 +4,7 @@
       <h2 class="text-3xl text-center lg:text-left font-bold">
         Neil Richter
       </h2>
-      <ul class="my-3 flex items-cente justify-center uppercase text-xs font-semibold">
+      <ul class="my-3 flex items-center justify-center uppercase text-xs font-semibold">
         <li class="mx-2 lg:ml-0 lg:mr-4 text-link-contrast">
           <nuxt-link to="/">
             Home
@@ -16,7 +16,7 @@
           </nuxt-link>
         </li>
         <li class="mx-2 lg:ml-0 lg:mr-4 text-link-contrast">
-          <a href="#">Contact</a>
+          <a href="mailto:me@neilrichter.com">Contact</a>
         </li>
       </ul>
     </div>

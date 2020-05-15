@@ -10,7 +10,8 @@ services:
         volumes:
             - ./app:/app
             - /app/node_modules
-        command: npm run dev
+        entrypoint: ["/app/entrypoint_dev.sh"]
+        working_dir: /app
         tty: true
         environment:
             NODE_ENV: ${NODE_ENV}

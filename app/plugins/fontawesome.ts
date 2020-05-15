@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-import { faStar, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faLink, faBars } from '@fortawesome/free-solid-svg-icons';
 
 fontawesome.config = {
   ...fontawesome.config,
@@ -21,6 +21,7 @@ library.add(
   faInstagram,
   faStar,
   faLink,
+  faBars,
 );
 
 dom.watch();

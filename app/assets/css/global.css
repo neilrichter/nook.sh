@@ -4,6 +4,10 @@ html {
   font-family: 'Lato';
 }
 
+a:focus {
+  @apply outline-none;
+}
+
 .visually-hidden { 
   position: absolute !important;
   height: 1px; 

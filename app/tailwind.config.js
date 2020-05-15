@@ -10,6 +10,9 @@ module.exports = {
       width: {
         44: '11rem',
       },
+      zIndex: {
+        '-10': -10,
+      },
       colors: {
         accent: '#ef5e76',
         white: '#ffffff',
