@@ -1,6 +1,6 @@
 <template>
   <article
-    class="github-project hover:shadow-xl"
+    class="github-project"
     :class="project.primaryLanguage.name"
   >
     <div class="head flex justify-between">
@@ -51,6 +51,10 @@ export default defineComponent<Props>({
   @apply font-light text-content;
 
   @apply border-t-4;
+}
+
+.github-project:hover {
+  @apply shadow-xl;
 }
 
 .github-project.TypeScript {
