@@ -69,11 +69,19 @@ export default defineComponent({
 
 <style scoped>
 .overlay {
-  @apply fixed flex flex-col -z-10 inset-0 p-2;
-  @apply opacity-0 bg-black transition duration-200;
+  @apply fixed flex flex-col p-2 inset-0;
+  @apply opacity-0 bg-black;
+  transform: translateX(-200%);
+  transition-duration: .2s, 0s;
+  transition-delay: 0s, 1s;
+  transition-property: opacity, transform;
 }
 #focus-target:checked + .overlay {
-  @apply z-10 opacity-100;
+  @apply z-20 opacity-100;
+  transform: translateX(0);
+  transition-duration: .2s, 0s;
+  transition-delay: 0s, 0s;
+  transition-property: opacity, transform;
 }
 
 li a:after {
