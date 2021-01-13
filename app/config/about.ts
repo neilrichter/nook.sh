@@ -34,6 +34,13 @@ export const experiences: HistoryEntry[] = [
     title: 'Front-end Engineer',
     description: 'Redesign of the AI configuration interface, implementation of design systems, development of products used by projects carried out by Golem.ai',
   },
+  {
+    company: 'HEC',
+    start: new Date(2021, 1 - 1),
+    end: new Date(2021, 2 - 1),
+    title: 'Teacher',
+    description: 'Teaching at HEC, the world-class business school. Winter Coding & Digital Camp, initiation to HTML, CSS and JavaScript. Taught in english.',
+  },
 ];
 
 export const education: HistoryEntry[] = [
