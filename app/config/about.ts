@@ -28,18 +28,18 @@ export const experiences: HistoryEntry[] = [
     description: 'Participation in the creation of Web tools for Golem.ai, research and development work, and product development. Technologies used: Vue.js, Symfony3 and 4, PostgreSQL, Docker',
   },
   {
+    company: 'HEC',
+    start: new Date(2021, 1 - 1),
+    end: new Date(2021, 1 - 1),
+    title: 'Teacher',
+    description: 'Teaching at HEC, the world-class business school. Winter Coding & Digital Camp, initiation to HTML, CSS and JavaScript. Taught in english.',
+  },
+  {
     company: 'Golem.ai',
     start: new Date(2020, 1 - 1),
     end: null,
     title: 'Front-end Engineer',
     description: 'Redesign of the AI configuration interface, implementation of design systems, development of products used by projects carried out by Golem.ai',
-  },
-  {
-    company: 'HEC',
-    start: new Date(2021, 1 - 1),
-    end: new Date(2021, 2 - 1),
-    title: 'Teacher',
-    description: 'Teaching at HEC, the world-class business school. Winter Coding & Digital Camp, initiation to HTML, CSS and JavaScript. Taught in english.',
   },
 ];
 
